@@ -1,0 +1,16 @@
+#find primes in 100
+print "2"."\t";
+for($i=3;$i<100;$i++){
+  $notprime=0;
+    for($j=2;$j<$i;$j++){
+        if($i%$j==0){
+          $notprime=0;
+          last;
+        }else{
+          $notprime=1;
+        }
+    }
+  if($notprime==1){
+    print "$i"."\t"
+  }
+}
