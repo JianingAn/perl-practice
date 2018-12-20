@@ -14,3 +14,39 @@ for($i=3;$i<100;$i++){
     print "$i"."\t"
   }
 }
+
+#法二：to find primes in 22000
+$i=0;
+push(@arr,1);  #1也算质数
+while($i<22000){
+	$j=2;
+	while($j<$i){	#循环
+		if($i%$j==0){	#条件语句
+			last; #跳出当前所在大循环
+		}
+		$j++;
+	}
+	if($j==$i){
+		push(@arr,$i);
+	}
+	$i++;
+}
+print join(" ",@arr);
+
+#to find primes in 22000
+$i=0;
+push(@arr,1);  #1也算质数
+while($i<22000){
+	$j=2;
+	while($j<$i){	#循环
+		if($i%$j==0){	#条件语句
+			last; #跳出当前所在大循环
+		}
+		$j++;
+	}
+	if($j==$i){
+		push(@arr,$i);
+	}
+	$i++;
+}
+print join(" ",@arr);
