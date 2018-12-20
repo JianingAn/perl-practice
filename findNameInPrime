@@ -1,0 +1,25 @@
+#find names in prime
+open(in,'perl_list.txt');
+$i=1;
+while(<in>){
+	chomp $_;
+	$j=2;
+	if($i==$j){
+		print $i.' '.$_."\n";
+	}
+	while($j<$i){
+		if($i%$j==0){
+			$isPrime=0;
+			last;
+		}else{
+			$isPrime=1;
+		}
+		$j++;
+	}
+	if($isPrime==1){
+		print $i.' '.$_."\n";
+	}
+	$i++;
+	
+}
+close(in);
