@@ -1,13 +1,13 @@
-#starTower
-print "please input a number";
-  $inp=<STDIN>;
-  chomp $inp;
-for($i=0;$i<$inp;$i++){
-  for($k=0;$k<$inp-$i;$k++){
-    print " ";
-  } 
-  for($j=0;$j<2*$i-1;$j++){
-    print "*";
-  }
-  print "\n"
-}
+#star tower 18.09.24
+print "please input a number\n";
+$inp=<STDIN>;
+	chomp $inp;
+for($i=1;$i<$inp+1;$i++){
+    for($j=0;$j<$inp-$i;$j++){
+        print " ";
+	}
+    for($k=0;$k<2*$i-1;$k++){
+        print "*";
+	}	
+        print "\n";
+}		
